@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 const yaml = require('yamljs');
 const config = yaml.load('../../secrets.yaml');
 
@@ -11,7 +11,7 @@ export function fetchWeather(city){
   const url = `${ROOT_URL}&q=${city},us`;
   const request = axios.get(url);
 
-  return{
+  return{    
     type: FETCH_WEATHER,
     payload: request
   };
